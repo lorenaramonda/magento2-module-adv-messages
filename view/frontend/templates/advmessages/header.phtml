@@ -1,0 +1,27 @@
+<?php
+/**
+ * Header ADV messages block template
+ *
+ * @var $block \Loreena\AdvMessages\Block\Advmessage
+ */
+
+$_helper = $this->helper( 'Loreena\AdvMessages\Helper\Advmessages' );
+$cookie = $_helper->getCookie('advmessages-header');
+?>
+<?php if ($cookie != 'closed') { ?>
+<div class="adv-message-header" style="display: none;">
+    <div class="adv-message">
+        <p><?php echo $block->getHeaderAdvMessageText();?></p>
+		<?php if($block->isHeaderAdvMessageFoldable()) { ?>
+            <button id="advmessages-header-close" type="button" data-type="close" title="<?php echo __('Close')?>"><?php echo __('Close')?></button>
+		<?php } ?>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".adv-message-header": {
+            "loreenaAdvMessages": <?php echo \Zend_Json::encode($block->getConfig()) ?>
+        }
+    }
+</script>
+<?php } ?>

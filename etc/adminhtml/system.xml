@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="loreena" translate="label" sortOrder="200">
+            <label><![CDATA[<span class='loreena-logo'>Loreena</span>]]></label>
+        </tab>
+        <section id="loreena_advmessages" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>ADV Messages</label>
+            <tab>loreena</tab>
+            <resource>Magento_Config::config_admin</resource>
+            <group id="header_banner_settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header Message settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display message</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>it will display under the site header</comment>
+                </field>
+                <field id="text" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="foldable" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Foldable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>enables close button in frontend to hide the message</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

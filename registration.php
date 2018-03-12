@@ -4,6 +4,6 @@ use \Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Loreena_AdvMessage',
+    'Loreena_AdvMessages',
     __DIR__
 );
