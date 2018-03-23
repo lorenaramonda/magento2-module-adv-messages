@@ -14,6 +14,7 @@
         }
     ],
     "require": {
+        "loreena/common-m2": "*"
     },
     "autoload": {
         "files": [

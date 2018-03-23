@@ -3,6 +3,7 @@
     <module name="Loreena_AdvMessages" setup_version="1.0.0">
         <sequence>
             <module name="Magento_Cms"/>
+            <module name="Loreena_Common"/>
         </sequence>
     </module>
 </config>
