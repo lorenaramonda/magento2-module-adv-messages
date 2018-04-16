@@ -8,7 +8,6 @@
 $_helper = $this->helper( 'Loreena\AdvMessages\Helper\Advmessages' );
 $cookie = $_helper->getCookie('advmessages-header');
 ?>
-<?php if ($cookie != 'closed') { ?>
 <div class="adv-message-header" style="display: none;">
     <div class="adv-message">
         <p><?php echo $block->getHeaderAdvMessageText();?></p>
@@ -24,4 +23,3 @@ $cookie = $_helper->getCookie('advmessages-header');
         }
     }
 </script>
-<?php } ?>

@@ -1,0 +1,30 @@
+& when (@media-common = true) {
+  .adv-message-header {
+    background-color: lightyellow;
+    text-align: center;
+    position: relative;
+    .adv-message {
+      padding: 1em;
+      max-width: @layout__max-width;
+    }
+    button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      background: none;
+      box-shadow: none;
+      font-size: 0;
+      &:after {
+        font-size: 1.5rem;
+        content: '\00D7';
+      }
+      &:hover, &:focus, &:active {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
